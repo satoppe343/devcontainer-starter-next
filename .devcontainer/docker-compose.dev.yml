@@ -1,0 +1,27 @@
+services:
+  next:
+    build:
+      context: .. # ビルドルート設定
+      args:
+        CONTAINER_USER: ${CONTAINER_USER}
+        CONTAINER_USER_HOME: ${CONTAINER_USER_HOME}
+        CONTAINER_ROOT: ${CONTAINER_ROOT}
+        USER_UID: ${HOST_UID:-2000}
+        USER_GID: ${HOST_GID:-2000}
+      dockerfile: ./.devcontainer/Dockerfile.dev # ビルドに使用するDockerfileの名前を指定
+    volumes:
+      - ..:/workspace/next:cached # ソースルートを共有
+      - "node_modules:/workspace/next/node_modules" # volumeマウントによる永続化(packageを共有しない為の設定)
+      - "pnpm-store:/app/.pnpm-store" # volumeマウントによる永続化(nextjsのホットリロード用設定)
+    command: /bin/sh -c "while sleep 1000; do :; done" # 永続的な起動
+
+volumes:
+  node_modules:
+    name: next-node_modules
+  pnpm-store:
+    name: next-pnpm-store
+
+# networks:
+#   next_network:
+#     name: next_network
+#     driver: bridge
