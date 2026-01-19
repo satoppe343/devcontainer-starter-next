@@ -29,14 +29,19 @@
         // 各言語共通設定
         "editor.formatOnSave": true,
         "editor.formatOnPaste": true,
+        "files.autoSave": "afterDelay",
         "editor.wordWrapColumn": 120,
         "editor.tabSize": 2,
         "editor.fontSize": 14,
         "editor.wordWrap": "off",
-        // Emmitを使用する言語
+        // Emmetの設定
+        "emmet.variables": {
+          "lang": "ja"
+        },
+        // Emmetを使用する言語
         "emmet.includeLanguages": {
-          // "javascript": "javascriptreact",
-          // "typescript": "typescriptreact"
+          "javascript": "javascriptreact",
+          "typescript": "typescriptreact"
         },
         // 各言語のデフォルトフォーマッター設定
         "[json]": {
