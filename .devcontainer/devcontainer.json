@@ -25,7 +25,7 @@
         // 文字コード設定
         "files.encoding": "utf8",
         // フォント指定
-        "editor.fontFamily": "'PlemolJP', Consolas, 'Courier New', monospace",
+        "editor.fontFamily": "HackGen, Consolas, 'Courier New', monospace",
         // 規定シェル
         "terminal.integrated.defaultProfile.linux": "zsh",
         // .code-workspaceファイルを開く設定(workspaceにフォルダを追加する場合の設定で、追加しない場合は下記をコメントアウト)
@@ -47,28 +47,8 @@
           "javascript": "javascriptreact",
           "typescript": "typescriptreact"
         },
-        // 各言語のデフォルトフォーマッター設定
-        "[json]": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode"
-        },
-        "[yaml]": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode"
-        },
-        "[markdown]": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode"
-        },
-        "[javascript]": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode"
-        },
-        "[typescript]": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode"
-        },
-        "[javascriptreact]": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode"
-        },
-        "[typescriptreact]": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode"
-        },
+        // デフォルトフォーマッター設定
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
         // 括弧記号色付
         "editor.bracketPairColorization.enabled": true,
         "editor.guides.bracketPairs": true,
